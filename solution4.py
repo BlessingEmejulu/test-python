@@ -1,5 +1,16 @@
 # Searching for a value in a BST
-# To find a value in BST, we start at the root and compare the value with the data of the current node. If the value is equal to the data of the current node, we return True. If the value is less than the data of the current node, we search in the left subtree. If the value is greater than the data of the current node, we search in the right subtree. We continue this process until we find the value or reach a leaf node (i.e., a node with no children).
+# To find a value in BST, we start at the root and compare the value with the data of the current node. If the value is equal to the data of the current node, we return True. If the value is less than the data of the current node, we search in the left subtree. If the value is greater than the data of the current node, we search in the right subtree. We continue this process until we find the value or reach a leaf node (i.e., a node with no children). If the value is not found, we return False.
+
+
+# Explaining the code
+# We define a Node class to represent the nodes of the BST.
+# We define a search function that takes the root of the BST and the value to search for as input.
+# The base cases are when the root is None (i.e., the tree is empty) or when the value is found at the root.
+# If the value is greater than the data of the current node, we recursively search in the right subtree.
+# If the value is smaller than the data of the current node, we recursively search in the left subtree.
+# We call the search function with the root of the BST and the value to search for.
+# If the value is found, we print "Value found in the BST tree". Otherwise, we print "Value NOT found in the BST tree".
+
 
 # The following code snippet demonstrates how to search for a value in a BST:
 

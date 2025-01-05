@@ -1,28 +1,4 @@
-# Steps to Delete a Node from a BST
-# Case 1: The Node is a Leaf (No Children)
-# Simply remove the node from the tree.
-# Case 2: The Node Has One Child
-# Replace the node with its child.
-# Case 3: The Node Has Two Children
-# Replace the node with:
-# Inorder Successor (smallest node in the right subtree), or
-# Inorder Predecessor (largest node in the left subtree).
-# Delete the successor/predecessor from its original position.
-
-# Pseudo code for  Deleting node in BST
-# we define our node class
-# we define our function to delete a node in BST
-# we define our helper function to find the minimum node in the right subtree
-# we define our helper function to perform an inorder traversal of the BST
-# we create a BST tree
-# we delete a node from the BST tree
-# we print the BST tree after deleting the node
-
-
-# Deleting a node from a BST
-
-# node class
-class Node:
+class TreeNode:
     def __init__(self, key):
         self.key = key
         self.left = None
@@ -70,22 +46,18 @@ def in_order(root):
         print(root.key, end=" ")
         in_order(root.right)
 
-# Create a BST tree
-root = Node(10)
-root.left = Node(3)
-root.right = Node(15)
-root.left.left = Node(1)
-root.left.right = Node(5)
-root.left.right.left = Node(4)
-root.left.right.right = Node(7)
-root.right.left = Node(12)
-root.right.right = Node(20)
-root.right.left.left = Node(11)
-root.right.right.left = Node(18)
+# Example Usage
+root = TreeNode(50)
+root.left = TreeNode(30)
+root.right = TreeNode(70)
+root.left.left = TreeNode(20)
+root.left.right = TreeNode(40)
+root.right.left = TreeNode(60)
+root.right.right = TreeNode(80)
 
 print("Original BST:")
 in_order(root)
-print("\nDeleting 15...")
-root = delete_node(root, 15)
+print("\nDeleting 50...")
+root = delete_node(root, 50)
 print("BST after deletion:")
 in_order(root)

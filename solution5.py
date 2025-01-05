@@ -14,7 +14,7 @@ class Node:
 # Function to insert a value into a BST
 def insert(root, value):
     if not root:
-        return TreeNode(value)
+        return Node(value)
     if value < root.value:
         root.left = insert(root.left, value)
     else:

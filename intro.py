@@ -49,3 +49,7 @@ def least_difference(a, b, c):
     diff2 = abs(b - c)
     diff3 = abs(a - c)
     return min(diff1, diff2, diff3)
+
+    def sum(a, b, c):
+        return a + b + c
+print(least_difference(1, 10, 100), "should be 9")

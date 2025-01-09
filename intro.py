@@ -52,4 +52,4 @@ def least_difference(a, b, c):
 
     def sum(a, b, c):
         return a + b + c
-print(least_difference(1, 10, 100), "should be 9")
+print(least_difference(1, 9, 100), "should be 9")
